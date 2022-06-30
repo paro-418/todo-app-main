@@ -7,6 +7,14 @@
   margin-bottom: 1rem;
 }
 
+@media  only screen and (max-width: 900px) {
+  .form{
+    margin-top: 1.5rem;
+    /* margin-bottom: 0.5rem; */
+  }  
+}
+
+
 .checkboxDiv {
   position: relative;
   flex-basis: 7%;

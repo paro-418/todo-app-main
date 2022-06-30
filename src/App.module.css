@@ -5,3 +5,12 @@
     transform: translateX(-50%);
     width: 50%;
 }
+
+@media  only screen and (max-width: 900px) {
+    .main{
+        border: 3px solid red;
+        top: 8%;
+        width: 70%;
+    }
+    
+}
