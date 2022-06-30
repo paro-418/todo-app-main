@@ -4,4 +4,10 @@ import "./index.css";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <React.Fragment>
+    <div className="background"></div>
+    <div className="noBackground"></div>
+    <App />
+  </React.Fragment>
+);

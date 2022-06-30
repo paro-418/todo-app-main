@@ -1,0 +1,49 @@
+.form {
+  border: 2px solid blue;
+  background-color: #fff;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.checkboxDiv {
+  position: relative;
+  flex-basis: 7%;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.label img {
+  width: 75%;
+  height: 75%;
+}
+
+.label {
+  border: 1px solid;
+  top: 50%;
+  left: 50%;
+  height: 1.2rem;
+  width: 1.2rem;
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.checkbox:checked + label {
+  background-image: linear-gradient(to right, #57ddff, #c058f3);
+}
+
+input[type="text"] {
+  flex-basis: 93%;
+  font-size: 1.2rem;
+  padding: 0.65rem;
+  border: none;
+  outline: none;
+  font-weight: 400;
+}
+
+

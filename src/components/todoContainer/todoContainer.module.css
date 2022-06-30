@@ -1,0 +1,6 @@
+.todoContainer{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
