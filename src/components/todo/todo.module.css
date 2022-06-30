@@ -1,11 +1,10 @@
 .todo{
     display: flex;
-    /* border: 2px solid red; */
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
     justify-content: space-between;
-    /* column-gap: 0.5rem; */
     background-color: #fff;
     align-items: center;
+    border-bottom: 1px solid #9394a5;
 }
 
 .checkboxDiv {
@@ -15,11 +14,6 @@
 
 .checkbox {
   display: none;
-}
-
-.label img {
-  width: 75%;
-  height: 75%;
 }
 
 .label {
@@ -32,6 +26,7 @@
   position: absolute;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 100%;
 }
 
@@ -49,21 +44,14 @@
 
 .delete{
     border: none;
-    /* border: 2px solid red; */
     background-color: transparent;
     height: 1.3rem;
     cursor: pointer;
     flex-basis: 4%;
-    /* margin:0 0.5rem; */
     margin-left: 0.5rem;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-}
-
-.delete img{
-    /* width: 100%;
-    height: 100%; */
 }
 
 .todo:hover .delete{

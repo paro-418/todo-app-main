@@ -8,6 +8,7 @@ const TodoContainer = (props) => {
       <Todo id="t1" />
       <Todo id="t2" />
       <Todo id="t3" />
+      <Todo id="t4" />
       <div className={classes.btnContainer}>
         <span>5 items left</span>
         <span>
