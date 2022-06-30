@@ -1,17 +1,20 @@
 .todo{
     display: flex;
-    border: 2px solid red;
-    padding: 0.2rem;
-    column-gap: 0.5rem;
+    /* border: 2px solid red; */
+    padding: 0.5rem 0rem;
+    justify-content: space-between;
+    /* column-gap: 0.5rem; */
+    background-color: #fff;
+    align-items: center;
 }
 
 .checkboxDiv {
   position: relative;
-  flex-basis: 7%;
+  flex-basis: 3%;
 }
 
 .checkbox {
-  opacity: 0;
+  display: none;
 }
 
 .label img {
@@ -29,14 +32,42 @@
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
   border-radius: 100%;
 }
 
 .checkbox:checked + label {
   background-image: linear-gradient(to right, #57ddff, #c058f3);
 }
-
 .todoPara{
-    flex-basis: 93%;
+    flex-basis: 86%;
+}
+
+.completed{
+    color: #9394a5 !important;
+    text-decoration:line-through;
+}
+
+.delete{
+    border: none;
+    /* border: 2px solid red; */
+    background-color: transparent;
+    height: 1.3rem;
+    cursor: pointer;
+    flex-basis: 4%;
+    /* margin:0 0.5rem; */
+    margin-left: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.delete img{
+    /* width: 100%;
+    height: 100%; */
+}
+
+.todo:hover .delete{
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
 }
