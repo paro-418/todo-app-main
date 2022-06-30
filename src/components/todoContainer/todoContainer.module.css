@@ -4,7 +4,7 @@
   flex-direction: column;
   border-radius: 0.5rem;
   overflow: hidden;
-  padding: 1rem 0rem;
+  padding: 0rem 0rem;
   background-color: #fff;
 }
 
@@ -15,10 +15,15 @@
   justify-content: space-between;
   align-items: center;
   color: #9394a5;
-   padding: 0rem 1rem;
+  padding: 1rem 1rem;
+}
+@media only screen and (max-width: 450px) {
+  .btnContainer {
+    padding-top: 0.5rem;
+  }
 }
 
-.btnContainer span:nth-of-type(2) {
+.desktopBtn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,4 +43,27 @@
 }
 .containerBtn:focus {
   color: #3a7bfd;
+}
+
+.mobileBtn {
+  display: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .mobileBtn {
+    display: block;
+    position: absolute;
+    top: 104%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    color: #9394a5;
+    border-radius: 0.5rem;
+  }
+  .desktopBtn {
+    display: none;
+  }
 }

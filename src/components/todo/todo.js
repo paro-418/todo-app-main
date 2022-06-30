@@ -14,9 +14,7 @@ const Todo = (props) => {
         </label>
       </div>
       <p className={`${classes.todoPara} ${isCompleted && classes.completed}`}>
-        jhfjk sdfhvkjhd iuhui fhsdkjicv iriofjs kdjcjfi ojkkldfjgkl vjhfjk
-        sdfhvkjhd iuhui fhsdkjicv iriofjs kdjcjfi ojkkldfjgkl jhfjk sdfhvkjhd
-        iuhui fhsdkjicv iriofjs kdjcjfi ojkkldfjgkl
+        jhfjk sdfhvkjhd iuhui fhsdkjicv iriofjs kdjcjfi 
       </p>
       <Button className={classes.delete}>
         <img src={cross} />

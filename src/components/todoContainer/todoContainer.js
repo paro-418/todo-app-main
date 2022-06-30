@@ -11,13 +11,18 @@ const TodoContainer = (props) => {
       <Todo id="t4" />
       <div className={classes.btnContainer}>
         <span>5 items left</span>
-        <span>
-          <Button className = {classes.containerBtn}>All</Button>
-          <Button className = {classes.containerBtn}>Active</Button>
-          <Button className = {classes.containerBtn}>Completed</Button>
+        <span className={classes.desktopBtn}>
+          <Button className={classes.containerBtn}>All</Button>
+          <Button className={classes.containerBtn}>Active</Button>
+          <Button className={classes.containerBtn}>Completed</Button>
         </span>
-        <Button className = {classes.containerBtn}>Clear Completed</Button>
+        <Button className={classes.containerBtn}>Clear Completed</Button>
       </div>
+      <span className= {classes.mobileBtn}>
+        <Button className={classes.containerBtn}>All</Button>
+        <Button className={classes.containerBtn}>Active</Button>
+        <Button className={classes.containerBtn}>Completed</Button>
+      </span>
     </div>
   );
 };
