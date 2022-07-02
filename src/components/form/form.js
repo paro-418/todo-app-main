@@ -1,22 +1,43 @@
 import classes from "./form.module.css";
 import check from "../../images/icon-check.svg";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { taskListSliceActions } from "../../store/todo-store";
+import { useRef } from "react";
+import Button from "../button/Button";
 
 const Form = () => {
   const theme = useSelector((state) => state.theme.light);
+  const taskRef = useRef();
+  const dispatch = useDispatch();
+
+  const submitTask = (event) => {
+    event.preventDefault();
+    dispatch(
+      taskListSliceActions.addTask({
+        id: (new Date().getTime() / (Math.random() * 1000000000 + 1)).toFixed(0),
+        description: taskRef.current.value,
+        completed: false,
+      })
+    );
+  };
+
   return (
-    <form className={`${!theme && classes.formDark} ${classes.form}`}>
-      <div className={classes.checkboxDiv}>
-        <input type="checkbox" className={classes.checkbox} id="checkbox" />
-        <label className={classes.label} htmlFor="checkbox">
-          <img src={check} />
-        </label>
-      </div>
+    <form
+      className={`${!theme && classes.formDark} ${classes.form}`}
+      onSubmit={submitTask}
+    >
       <input
         type="text"
+        ref={taskRef}
         placeholder="enter your todo here"
         className={`${classes.todoInput} ${!theme && classes.todoInputDark}`}
       />
+      <Button
+        className={`${classes.btn} ${!theme && classes.btnDark}`}
+        type="submit"
+      >
+        <img src={check} />
+      </Button>
     </form>
   );
 };

@@ -3,7 +3,7 @@ import sun from "../../images/icon-sun.svg";
 import moon from "../../images/icon-moon.svg";
 import { useSelector, useDispatch } from "react-redux/es/exports";
 import { themeActions } from "../../store/theme-store";
-import Button from "../button/button";
+import Button from "../button/Button";
 
 const Header = () => {
   const dispatch = useDispatch();
