@@ -6,6 +6,9 @@
     align-items: center;
     border-bottom: 1px solid #9394a5;
 }
+.todoDark{
+  background-color: #25273c;
+}
 
 @media  only screen and (max-width: 450px) {
     .todo{
@@ -38,6 +41,13 @@
 
 .checkbox:checked + label {
   background-image: linear-gradient(to right, #57ddff, #c058f3);
+}
+
+.label img{
+  opacity: 0;
+}
+.checkbox:checked + label img{
+  opacity: 1;
 }
 .todoPara{
     flex-basis: 86%;

@@ -6,8 +6,7 @@ import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.Fragment>
-    <div className="background"></div>
-    {/* <div className="noBackground"></div> */}
+    <div className="background background-dark"></div>
     <App />
   </React.Fragment>
 );

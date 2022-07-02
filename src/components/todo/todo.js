@@ -6,7 +6,7 @@ import cross from "../../images/icon-cross.svg";
 const Todo = (props) => {
   const isCompleted = true;
   return (
-    <article className={classes.todo}>
+    <article className={`${classes.todo} ${classes.todoDark}`}>
       <div className={classes.checkboxDiv}>
         <input type="checkbox" className={classes.checkbox} id={props.id} />
         <label className={classes.label} htmlFor={props.id}>

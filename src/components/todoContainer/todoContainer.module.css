@@ -6,16 +6,24 @@
   overflow: hidden;
   padding: 0rem 0rem;
   background-color: #fff;
+  margin-bottom: 3rem;
+}
+
+.todoContainerDark{
+  background-color: #161720;
 }
 
 .btnContainer {
   font-size: 0.9rem;
-  margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #9394a5;
   padding: 1rem 1rem;
+}
+
+.btnContainerDark{
+  background-color: #25273c;
 }
 @media only screen and (max-width: 450px) {
   .btnContainer {
@@ -52,9 +60,6 @@
 @media only screen and (max-width: 450px) {
   .mobileBtn {
     display: block;
-    position: absolute;
-    top: 104%;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
@@ -62,6 +67,10 @@
     padding: 1rem;
     color: #9394a5;
     border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+  .mobileBtnDark{
+    background-color: #25273c;
   }
   .desktopBtn {
     display: none;
