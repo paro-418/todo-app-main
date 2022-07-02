@@ -11,12 +11,27 @@ const Todo = (props) => {
   const deleteTask = (closeClicked) => {
     dispatch(taskListSliceActions.removeTask(closeClicked.target.id));
   };
+
+  const markComplete = (labelClicked) => {
+    const idToMark = labelClicked.target.id;
+    dispatch(
+      taskListSliceActions.markComplete(
+        idToMark.substring(0, idToMark.length - 3)
+      )
+    );
+  };
+  
   return (
     <article className={`${classes.todo} ${!theme && classes.todoDark}`}>
       <div className={classes.checkboxDiv}>
         <input type="checkbox" className={classes.checkbox} id={props.id} />
-        <label className={classes.label} htmlFor={props.id}>
-          <img src={check} />
+        <label
+          className={classes.label}
+          htmlFor={props.id}
+          onClick={markComplete}
+          id={props.id + "LAB"}
+        >
+          <img src={check} id={props.id + "LMG"} />
         </label>
       </div>
       <p

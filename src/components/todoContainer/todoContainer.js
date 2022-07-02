@@ -17,7 +17,7 @@ const TodoContainer = (props) => {
           key={obj.id}
           id={obj.id}
           description={obj.description}
-          isCompleted={props.completed}
+          isCompleted={obj.completed}
         />
       ))}
 

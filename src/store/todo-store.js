@@ -11,8 +11,14 @@ const taskListSlice = createSlice({
     },
     removeTask(state, action) {
       state.todoArray = state.todoArray.filter(
-        (obj) => obj.id+'IMG' !== action.payload
+        (obj) => obj.id + "IMG" !== action.payload
       );
+    },
+    markComplete(state, action) {
+      state.todoArray.forEach( obj => {
+        if( obj.id === action.payload)
+          obj.completed = !obj.completed;
+      })
     },
   },
 });
