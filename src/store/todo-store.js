@@ -10,10 +10,9 @@ const taskListSlice = createSlice({
       state.todoArray.push(action.payload);
     },
     removeTask(state, action) {
-      const newInitialState = state.todoArray.filter(
-        (task) => task.id !== action.payload
+      state.todoArray = state.todoArray.filter(
+        (obj) => obj.id+'IMG' !== action.payload
       );
-      state.todoArray = newInitialState;
     },
   },
 });

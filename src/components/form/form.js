@@ -5,7 +5,7 @@ import { taskListSliceActions } from "../../store/todo-store";
 import { useRef } from "react";
 import Button from "../button/Button";
 
-const Form = () => {
+const Form = (props) => {
   const theme = useSelector((state) => state.theme.light);
   const taskRef = useRef();
   const dispatch = useDispatch();
@@ -22,6 +22,7 @@ const Form = () => {
         completed: false,
       })
     );
+    taskRef.current.value = "";
   };
 
   return (
