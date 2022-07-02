@@ -29,23 +29,3 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-.background {
-  background-image: url("./images/bg-desktop-light.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  flex-basis: 40%;
-}
-
-.background-dark{
-  background-image: url("./images/bg-desktop-dark.jpg");
-}
-
-@media  only screen and (max-width: 450px) {
-  .background{
-    background-image: url("./images/bg-mobile-light.jpg");
-  }
-  .background-light{
-    background-image: url("./images/bg-mobile-dark.jpg");
-  }
-}

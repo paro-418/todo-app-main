@@ -1,0 +1,27 @@
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  background-image: url("../../images/bg-desktop-light.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-basis: 40%;
+}
+
+.backgroundDark {
+  background-image: url("../../images/bg-desktop-dark.jpg");
+}
+
+@media only screen and (max-width: 450px) {
+  .background {
+    background-image: url("../../images/bg-mobile-light.jpg");
+  }
+  .backgroundDark {
+    background-image: url("../../images/bg-mobile-dark.jpg");
+  }
+}

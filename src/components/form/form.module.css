@@ -9,6 +9,7 @@
 
 .formDark{
   background-color: #25273c;
+   color: hsl(234, 39%, 85%);
 }
 
 @media  only screen and (max-width: 900px) {

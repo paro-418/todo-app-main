@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import store from "./store/store";
+import { Provider } from "react-redux";
+import UI from "./components/UI/UI";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.Fragment>
-    <div className="background background-dark"></div>
-    <App />
-  </React.Fragment>
+  <Provider store = {store}>
+    <UI/>
+  </Provider>
 );
