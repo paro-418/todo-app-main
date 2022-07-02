@@ -14,13 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
   height: 100vh;
-  background-color: #fafafa;
 }
-
-.body-dark{
-  background-color: #161722;
-}
-
 
 #root {
   width: 100vw;

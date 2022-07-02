@@ -21,12 +21,12 @@
 .btn {
   flex-basis: 7%;
   border: none;
-  background-color: #25273c;
   cursor: pointer;
+  background-color: #484b6a;
 }
 
 .btnDark {
-  background-color: #9394a5;
+  background-color: #25273c;
 }
 
 @media only screen and (max-width: 450px) {

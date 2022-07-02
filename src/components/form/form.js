@@ -12,9 +12,12 @@ const Form = () => {
 
   const submitTask = (event) => {
     event.preventDefault();
+    if (taskRef.current.value.trim().length === 0) return;
     dispatch(
       taskListSliceActions.addTask({
-        id: (new Date().getTime() / (Math.random() * 1000000000 + 1)).toFixed(0),
+        id: (new Date().getTime() / (Math.random() * 1000000000 + 1)).toFixed(
+          0
+        ),
         description: taskRef.current.value,
         completed: false,
       })

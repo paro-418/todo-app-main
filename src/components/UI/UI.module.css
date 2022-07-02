@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.mainContainerDark{
+  background-color: #161722;
+}
+
 .background {
   background-image: url("../../images/bg-desktop-light.jpg");
   background-size: contain;
