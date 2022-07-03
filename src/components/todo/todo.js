@@ -20,11 +20,15 @@ const Todo = (props) => {
       )
     );
   };
-  
   return (
     <article className={`${classes.todo} ${!theme && classes.todoDark}`}>
       <div className={classes.checkboxDiv}>
-        <input type="checkbox" className={classes.checkbox} id={props.id} />
+        <input
+          type="checkbox"
+          className={`${classes.checkbox}`}
+          id={props.id}
+          defaultChecked={props.isCompleted ? "checked" : ""}
+        />
         <label
           className={classes.label}
           htmlFor={props.id}

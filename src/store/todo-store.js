@@ -1,24 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { todoArray: [] };
+const initialState = { todoTask: []};
 
 const taskListSlice = createSlice({
   name: "task",
   initialState: initialState,
   reducers: {
     addTask(state, action) {
-      state.todoArray.push(action.payload);
+      state.todoTask.push(action.payload);
     },
     removeTask(state, action) {
-      state.todoArray = state.todoArray.filter(
+      state.todoTask = state.todoTask.filter(
         (obj) => obj.id + "IMG" !== action.payload
       );
     },
     markComplete(state, action) {
-      state.todoArray.forEach( obj => {
-        if( obj.id === action.payload)
-          obj.completed = !obj.completed;
-      })
+      for (let i = 0; i < state.todoTask.length; i++) {
+        if (state.todoTask[i].id === action.payload) {
+          state.todoTask[i].completed = !state.todoTask[i].completed;
+          break;
+        }
+      }
+
+      // state.completedTask = state.todoTask.filter((obj) => obj.id === true);
+      // state.incompleteTask = state.todoTask.filter((obj) => obj.id === false);
     },
   },
 });
