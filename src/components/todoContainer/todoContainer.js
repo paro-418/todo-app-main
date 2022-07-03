@@ -49,7 +49,7 @@ const TodoContainer = () => {
         }
       );
       const reply = await response.json();
-      console.log(reply);
+      // succsessfuly storing data but PUT method overriding and hence deleting all previous data with new one
     };
 
     uploadData();
