@@ -1,0 +1,11 @@
+.empty {
+  padding: 2rem;
+  width: 100%;
+  color: #25273c;
+  text-align: center;
+}
+
+.emptyDark{
+  color:  #9394a5;
+  background-color: #25273c;
+}

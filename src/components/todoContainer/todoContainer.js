@@ -1,15 +1,17 @@
 import Button from "../button/Button";
 import Todo from "../todo/todo";
 import classes from "./todoContainer.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
+import { taskListSliceActions } from "../../store/todo-store";
+import Empty from "./empty";
 
 const TodoContainer = () => {
+  const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme.light);
   const todoArray = useSelector((state) => state.task.todoTask);
   const incompleteTask = todoArray.filter((obj) => obj.completed === false);
   const completedTask = todoArray.filter((obj) => obj.completed === true);
-
   const [all, setAll] = useState(true);
   const [incomplete, setIncomplete] = useState(false);
   const [complete, setComplete] = useState(false);
@@ -31,22 +33,28 @@ const TodoContainer = () => {
     setIncomplete(true);
   };
 
+  const deleteCompleted = () => {
+    dispatch(taskListSliceActions.deleteTask());
+  };
+
   return (
     <div
       className={`${classes.todoContainer} ${
         !theme && classes.todoContainerDark
       }`}
     >
-      {all &&
-        todoArray.map((obj) => (
-          <Todo
-            key={obj.id}
-            id={obj.id}
-            description={obj.description}
-            isCompleted={obj.completed}
-          />
-        ))}
-      {complete &&
+      {all && (todoArray.length === 0
+        ? <Empty >No Task exist. Please add some task. 😀</Empty>
+        : todoArray.map((obj) => (
+            <Todo
+              key={obj.id}
+              id={obj.id}
+              description={obj.description}
+              isCompleted={obj.completed}
+            />
+          )))}
+      {complete && (completedTask.length === 0 ?
+        <Empty>No Task is been completed yet 😐. </Empty>:
         completedTask.map((obj) => (
           <Todo
             key={obj.id}
@@ -54,8 +62,8 @@ const TodoContainer = () => {
             description={obj.description}
             isCompleted={true}
           />
-        ))}
-      {incomplete &&
+        )))}
+      {incomplete && ( incompleteTask.length === 0 ? <Empty>Congratulations 👏 you've finished all of your task.</Empty> :
         incompleteTask.map((obj) => (
           <Todo
             key={obj.id}
@@ -63,7 +71,7 @@ const TodoContainer = () => {
             description={obj.description}
             isCompleted={false}
           />
-        ))}
+        )))}
 
       {todoArray.length > 0 && (
         <div
@@ -91,7 +99,12 @@ const TodoContainer = () => {
               Completed
             </Button>
           </span>
-          <Button className={classes.containerBtn}>Clear Completed</Button>
+          <Button
+            className={classes.containerBtn}
+            callFunction={deleteCompleted}
+          >
+            Clear Completed
+          </Button>
         </div>
       )}
       <span

@@ -23,11 +23,16 @@
   flex-basis: 7%;
   border: none;
   cursor: pointer;
-  background-color: #484b6a;
+  background-color: #25273c;
+}
+
+.btn img{
+  width: 35%;
+
 }
 
 .btnDark {
-  background-color: #25273c;
+  background-color: #393a4c;
 }
 
 @media only screen and (max-width: 450px) {

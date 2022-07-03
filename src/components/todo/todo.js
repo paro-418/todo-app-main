@@ -15,7 +15,7 @@ const Todo = (props) => {
   const markComplete = (labelClicked) => {
     const idToMark = labelClicked.target.id;
     dispatch(
-      taskListSliceActions.markComplete(
+      taskListSliceActions.markTask(
         idToMark.substring(0, idToMark.length - 3)
       )
     );
